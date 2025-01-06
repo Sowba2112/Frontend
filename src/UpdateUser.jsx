@@ -2,7 +2,7 @@ import React from 'react'
 import { useState} from 'react'
 import { useParams,useNavigate } from 'react-router-dom'
 import axios from 'axios';
-
+import './User.css';
 
 const UpdateUser = () => {
   const{id}=useParams();
@@ -33,11 +33,11 @@ const UpdateUser = () => {
       <h1>UpdateUser</h1>
       <form onSubmit={update}>
             <label>Name</label>
-            <td><input type="text" value={name} onChange={(e)=>setName(e.target.value)}/></td><br/>
+            <td><input type="text" onChange={(e)=>setName(e.target.value)}/></td><br/>
             <label>Email</label>
-            <td><input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/></td><br/>
+            <td><input type="email" onChange={(e)=>setEmail(e.target.value)}/></td><br/>
             <label>Address</label>
-            <td><input type="text" value={address} onChange={(e)=>setAddress(e.target.value)}/></td><br/>
+            <td><input type="text" onChange={(e)=>setAddress(e.target.value)}/></td><br/>
             <button type="submit">Update</button>
         </form>
     </div>

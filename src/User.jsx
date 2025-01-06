@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
+
 const User = () => {
 const [user, setUser] = useState([
     // {name:"sow",email:"sow@gmail.com", address:" Erode"}
@@ -21,7 +22,7 @@ const deleteUser = (id) => {
   return (
     <div>
       <center><h1>User Details</h1></center>
-      <Link to="/create">Create</Link>
+      <center><Link to="/create">Create</Link></center>
       <table>
         <tr>
             <th>Name</th>
@@ -48,3 +49,4 @@ const deleteUser = (id) => {
 }
 
 export default User
+
